@@ -1,159 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- Fontes do Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<html lang="pt-br">
 
-    <!-- Fonte do Google - Poppins -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-      rel="stylesheet"
-    />
+<head>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Portfólio de Gustavo Teles, desenvolvedor fullstack."
-    />
-    <meta name="author" content="Gustavo Teles" />
-    <meta name="keyword" content="HTML, CSS, JavaScript" />
-    <link rel="icon" href="/assets/img/favicon.svg" />
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Potfólio</title>
-  </head>
-  <body>
-    <!-- Cabeçalho -->
-    <header class="flex menu_container">
-      <div id="header_content" class="menu_content">
-        <div id="titulo">
-          <a href="">Potfólio </a>
-        </div>
+  <!-- Fonte do Google - Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 
-        <div id="menu" class="flex">
-          <nav>
-            <ul class="flex menu_list">
-              <li><a href="#">Home</a></li>
-              <li><a href="#about">Sobre</a></li>
-              <li><a href="#contact">Contato</a></li>
-            </ul>
-          </nav>
-        </div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfólio de Gustavo Teles, desenvolvedor fullstack." />
+  <meta name="author" content="Gustavo Teles" />
+  <meta name="keyword" content="HTML, CSS, JavaScript" />
+  <link rel="icon" href="/assets/img/favicon.svg" />
+
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <title>Portfólio</title>
+</head>
+
+<body>
+
+
+  <!-- Cabeçalho -->
+  <header class="flex menu-container">
+
+    <div id="header-content" class="menu-content">
+
+      <!-- Título do Cabeçalho -->
+      <div id="title">
+        <a href="#">Portfólio</a>
       </div>
-    </header>
-    <!-- Sessão principal da página -->
-    <main>
-      <section id="home" class="flex home_container">
-        <article id="home_texto" class="home_content">
-          <h4>Bem vindo</h4>
-          <h1>Meu nome é Gustavo Teles</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt culpa
-            quo expedita quibusdam, aliquid aliquam sed mollitia odio, omnis
-            voluptatum voluptates non natus earum praesentium, explicabo
-            molestias totam officia laboriosam!
-          </p>
-          <a href="https://github.com/ustavoteles" target="_blank" class="botao"
-            >Conhecer</a
-          >
-        </article>
 
-        <article id="home_imagem" class="home_content">
-          <img
-            src="./assets/img/astronauta.svg"
-            alt="Capacete de Astronauta Animado"
-          />
-        </article>
-      </section>
+      <!-- Menu -->
+      <div id="menu" class="flex">
+        <nav>
+          <ul class="flex menu-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
 
-      <section id="about">
-        <article id="about_texto">
-          <img src="./assets/img/user_01.svg" alt="Foto do Perfil" />
-          <h1>Sobre mim</h1>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi
-            beatae incidunt at nesciunt autem consectetur corrupti iste adipisci
-            error quam modi, corporis provident a aperiam omnis consequuntur
-            officiis! Cumque, repudiandae.
-          </p>
+  </header>
 
-          <div id="about_github">
-            <a
-              href="https://github.com/ustavoteles"
-              target="_blank"
-              class="botao"
-            >
-              Github
-            </a>
-            <p>200 seguidores</p>
-            <p>20 repositórios</p>
-          </div>
-        </article>
-      </section>
+  <!-- Sessão principal da página -->
+  <main>
 
-      <section id="contact">
-        <h4>Contate-me</h4>
+    <!-- Seção home -->
+    <section id="home" class="flex home-container">
+
+      <!-- Texto da Seção Home -->
+      <article id="home-text" class="flex home-content">
+
+        <h4><span>Bem vindo</span></h4>
+        <h1>Meu nome é Gustavo Teles</h1>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex aliquam
-          iste voluptatem temporibus similique veritatis, soluta hic officia
-          excepturi quis pariatur ipsa, totam nisi eos facere voluptas odio vel!
-          Ea?
+           Desenvolvedor Fullstack com experiência em <span id="stacks-names"> JavaScript, TypeScript (Node.js, React) e Python (Django) </span>. Tenho conhecimento
+          em <span id="stacks-names">APIs RESTful e bancos de dados como MySQL, PostgreSQL, MongoDB </span>. Atualmente, busco oportunidades como
+          Desenvolvedor Full-Stack Júnior para aplicar e expandir minhas habilidades.
         </p>
+        <a href="curriculo-gustavo-teles.pdf" download="Curriculo Gustavo Teles.pdf" class="button" >Baixar currículo</a>
+      </article>
 
-        <div id="icones_redes_sociais">
-          <a href="" target="_blank">
-            <img src="./assets/img/linkedin.svg" alt="Logo do Linkedin" />
-          </a>
+      <article id="home-image" class="flex home-content">
+        <img src="./assets/img/robo.png" alt="Robo Animado" />
+      </article>
+    </section>
 
-          <a href="" target="_blank">
-            <img src="./assets/img/github.svg" alt="Logo do github" />
-          </a>
-        </div>
+    <section id="about" class="flex about-container">
 
-        <form action="" method="post">
-          <label for="nome">Nome</label>
-          <input
-            id="nome"
-            type="text"
-            name="nome"
-            placeholder="Digite seu nome"
-          />
-          <span id="txtNome"></span>
 
-          <label for="email">Email</label>
-          <input
-            id="email"
-            type="text"
-            name="assunto"
-            placeholder="Digite o endereço do seu E-mail"
-          />
-          <span id="txtEmail"></span>
+    </section>
 
-          <label for="assunto">Assunto</label>
-          <input
-            id="assunto"
-            type="text"
-            name="assunto"
-            placeholder="Digite o assunto da sua mensagem"
-          />
-          <span id="txtAssunto"></span>
+    <section id="contact" class="contact-container">
+      <h4><span>Contate-me</span></h4>
+      <p>Se você tem alguma dúvida, sugestão ou gostaria de discutir um projeto, estou à disposição para conversar! Adoro colaborar em novas ideias e compartilhar conhecimentos. Não hesite em me enviar uma mensagem, seja para tirar dúvidas sobre meu trabalho ou para explorar novas oportunidades. Estou sempre aberto a novos desafios!</p>
+      <section id="social-icons" class="social-container">
+        <a href="" target="_blank">
+          <img src="./assets/img/linkedin.svg" alt="Logo do Linkedin" class="social-icon" />
+        </a>
 
-          <label for="mensagem">Mensagem</label>
-          <textarea
-            id="mensagem"
-            name="mensagem"
-            placeholder="Digite sua mensagem"
-          ></textarea>
-
-          <button type="submit">Enviar</button>
-        </form>
+        <a href="" target="_blank">
+          <img src="./assets/img/github.svg" alt="Logo do github" class="social-icon" />
+        </a>
       </section>
-    </main>
-    <!-- Rodapé da página -->
-    <footer>
-      Feito por 🚀 <spam id="nomeFooter">Gustavo Teles</spam> - 2025
-    </footer>
-  </body>
+
+      <form action="https://formsubmit.co/telesgustavo.dev@gmail.com" method="post" id="form">
+
+        <input type="hidden" name="_next" value="http://127.0.0.1:5500/sucess.html">
+        <input type="hidden" name="_captcha" value="false">
+
+        <label for="name">Nome</label>
+        <input id="name" type="text" name="name" placeholder="Digite seu nome" />
+        <span id="txtName"></span>
+
+        <label for="email">Email</label>
+        <input id="email" type="text" name="email" placeholder="Digite o endereço do seu E-mail" />
+        <span id="txtEmail"></span>
+
+        <label for="subject">Assunto</label>
+        <input id="subject" type="text" name="subject" placeholder="Digite o assunto da sua mensagem" />
+        <span id="txtSubject"></span>
+
+        <label for="message">Mensagem</label>
+        <textarea id="message" name="message" placeholder="Digite sua mensagem"></textarea>
+
+        <button type="submit" class="button">Enviar</button>
+      </form>
+    </section>
+
+  </main>
+  <!-- Rodapé da página -->
+
+  <footer>
+
+    Feito por 🚀 <span id="footer-name">Gustavo Teles</span> - 2025
+  </footer>
+
+  <script src="./assets/js/scripts.js"></script>
+</body>
+
 </html>

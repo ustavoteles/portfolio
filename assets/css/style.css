@@ -1,137 +1,614 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+/*  Reset Global da página HTML 
+    Este seletor afeta todos os elementos da página.
+*/
+* {
+    margin: 0;
+    padding: 0;
+
+    /* Faz com que width e height incluam a borda e o padding,*/
+    box-sizing: border-box;
+
+    /* Desabilita o sublinhado dos links*/
     text-decoration: none;
-    outline:none;
+
+    /* Desabilita a borda de foco dos elementos*/
+    outline: none;
+
     font-weight: 400;
-    font-family:'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-:root{
-    --blue-200: #7bb1d1; 
+/* Declaração das variáveis */
+:root {
+    --blue-200: #7bb1d1;
     --blue-500: #367cc8;
-    --blue-800: #1f4b88; 
- 
+    --blue-800: #1f4b88;
+
     --gray-200: #cccccc;
     --gray-400: #505861;
- 
+
     --black-800: #171717;
- 
+
     --white: #F9F9F9;
 }
 
-html{
-    width:100%;
-    height:100vh;
-    scroll-behavior:smooth;
+/* Configurações padrões da página 
+   Este seletor afeta todos os elementos debtro da tag html.
+*/
+html {
+    width: 100%;
+    height: 100vh;
+
+    /* Permite que a rolagem da página aconteça de forma suave*/
+    scroll-behavior: smooth;
 }
 
-body{
-    background-color:var(--gray-200);
-    color:var(--black-800);
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-}
-
-button,a{
-    cursor:pointer;
-}
-
-.botao{
-    text-align: center;
-    padding: 12px 32px;
-    background:none;
-    border: 1px solid var(--blue-800);
-    border-radius:10px;
+span {
+    color: var(--blue-800);
+    font-size: 2rem;
     font-weight: bold;
 }
 
-.botao:hover{
-    background-color: var(--blue-800);
-    color: var(--white)
+body {
+    background-color: var(--gray-200);
+    color: var(--black-800);
+
+    /* Exibe as fontes com um traço mais fino e suave (Chrome e Edge) */
+    -webkit-font-smoothing: antialiased;
+
+    /* Exibe as fontes com um traço mais fino e suave (Firefox) */
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.flex{
-    display:flex;
+button,
+a {
+    cursor: pointer;
+}
+
+.button {
+    padding: 0.5rem 2rem;
+    border: 1px solid var(--blue-800);
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--blue-800);
+    background: none;
+}
+
+.button:hover {
+    color: var(--white);
+    background-color: var(--blue-800);
+}
+
+.flex {
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/*Estilização - Seção Header*/
+/* Estilização - Seção Header */
 
-.menu_container{
-    height: 80px;
-    position:sticky;
+.menu-container {
+    position: sticky;
     top: 0;
-    background-color: var(--blue-800);
+    width: 100%;
+    height: 5rem;
     border-bottom: 1px solid var(--blue-500);
+    background-color: var(--blue-800);
+    z-index: 10;
+
+    /* Aplica transparência */
     filter: opacity(0.9);
 }
 
-.menu_container a{
-    color:var(--white);
-    font-weight: bold;
-    
+.menu-container a {
+    font-weight: 700;
+    color: var(--white);
 }
 
-.menu_container a:hover{
-    color: var(--blue-200)
+.menu-container a:hover {
+    color: var(--blue-200);
 }
 
-.menu_content{
-    max-width:1120px;
-    padding: 0 24px;
-    display:flex;
+.menu-content {
+    display: flex;
     justify-content: space-between;
     width: 100%;
+    max-width: 1120px;
+    padding: 0 1.5rem;
 }
 
-.menu_list{
+.menu-list {
+    text-align: center;
     list-style: none;
-    text-align:center;
 }
 
-.menu_list li{
+.menu-list li {
     margin-left: 1rem;
 }
 
-.home_container{
+/* #menu-content_sucess {
+    width: 100%;
     max-width: 1120px;
-    margin:16px auto;
+    padding: 0 1.5rem;
+} */
+
+/* Estilização da Seção Home */
+
+.home-container {
+
+    /* Calcula altura do elemento (altura do navegador - altura do menu + 20px) */
+    height: calc(100vh - 6.25rem);
+
+    max-width: 1120px;
+    margin: 1rem auto;
     padding: 0 1rem;
-    height:calc(100vh - 100px);
 }
 
-.home_container p,h1,h4{
-    text-align:center;
-    font-size:1rem;
+#stacks-names {
+    font-size: 1em;
 }
 
-.home_container h1{
+.home-container p,
+h1,
+h4 {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.home-container h1 {
     font-size: 2.25rem;
+    font-weight: 700;
     line-height: 3rem;
-    font-weight: bold;
 }
 
-.home_container h4{
-    font-weight:bold;
+.home-container h4 {
+    font-weight: 700;
 }
 
-.home_container p {
+.home-container p {
     margin: 1rem 0;
 }
 
-.home_container .botao{
+.home-container .button {
     width: 40%;
 }
 
-.home_content{
+.home-content {
+    flex-direction: column;
     width: 50vw;
-    flex-direction:column;
 }
 
-.home_content img{
-    display:flex;
-    width:75%;
+.home-content img {
+    width: 85%;
+    transform: translate(-5%, -5%);
+    /* Posiciona no centro */
+    animation: float 3s ease-in-out infinite;
+    /* Adiciona a animação */
+    z-index: 3;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translate(-5%, -5%) translateY(-10px);
+        /* Adiciona o movimento */
+    }
+
+    50% {
+        transform: translate(-5%, -5%) translateY(10px);
+        /* Adiciona o movimento */
+    }
+}
+
+
+/* Estilização da Seção Home - Página Sucess */
+/* 
+.home-container_sucess {
+    height: calc(100vh - 12.5rem);
+    max-width: 1120px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+#home_sucess {
+    width: 50vw;
+    flex-direction: column;
+}
+
+#home_sucess h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#home_sucess h4 {
+    font-size: 1.25rem;
+    padding: 1rem;
+} */
+
+/* Estilização da Seção Sobre */
+
+.about-container {
+    max-width: 1120px;
+    margin: -1.25rem auto;
+    padding: 0 1rem;
+    height: 100vh;
+}
+
+.about-container img {
+    width: 80%;
+    margin: 1rem;
+    border: 5px solid var(--blue-500);
+    border-radius: 50%;
+}
+
+.about-container h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.about-container p {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.about-github {
+    justify-content: space-evenly;
+}
+
+#about-text {
+    margin-left: 2rem;
+}
+
+/* Estilização da Seção Contact */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+    max-width: 1120px;
+    margin: 4rem auto 2rem;
+    padding: 0 2rem;
+}
+
+.contact-container h4 {
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+
+}
+
+.contact-content {
+    flex-direction: column;
+    margin: 4rem 0 0 0;
+    font-size: 1.25rem;
+}
+
+.contact-content p {
+    display: block;
+    text-align: justify;
+}
+
+/* Estilização da Seção Redes Sociais*/
+
+.social-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem 0 0 0;
+}
+
+.social-icon {
+    width: 4.75rem;
+    height: 4.75rem;
+}
+
+.social-icon:hover {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(24%) saturate(4557%) hue-rotate(242deg) brightness(89%) contrast(108%);
+
+}
+
+/* Estilização da Seção Form*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 7rem 0 0 0;
+    padding: 1.25rem;
+    border: none;
+}
+
+form label {
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+form input,
+textarea {
+    width: 100%;
+    margin: 0.5rem 0 1rem;
+    padding: 0.5rem;
+    border-radius: 20px;
+    border: none;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+form span {
+    margin-bottom: 0.5rem;
+    margin-left: 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    color: red;
+}
+
+/* Estilização da Seção Footer */
+
+footer {
+    margin: 0;
+    padding: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--blue-500);
+    filter: opacity(0.9);
+}
+
+#footer-name {
+    font-size:1rem;
+    color: var(--black-800);
+    font-weight: bold;
+}
+
+/* Modo Responsivo */
+
+/* Smartphone - Telas até 490px */
+
+@media screen and (max-width: 490px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    main {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    footer {
+        margin-top: auto;
+    }
+
+    /* Ajustes no Menu*/
+
+    .menu-container {
+        height: auto;
+        padding: 1rem 0;
+    }
+
+    .menu-content {
+        justify-content: center;
+        max-width: 100%;
+        /* padding: 1rem; */
+    }
+
+    #title a {
+        font-size: 1.75rem;
+    }
+
+    .menu-list {
+        display: none;
+    }
+
+    /* Ajustes na Seção Home*/
+
+    .home-container {
+        flex-direction: column-reverse;
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+    }
+
+    .home-content {
+        width: 100%;
+    }
+
+    .home-content h1 {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    .home-content .button,
+    img {
+        width: 80%
+    }
+
+    #home-text {
+        margin-top: 0.5rem;
+    }
+
+    #home-image {
+        margin-bottom: 0;
+    }
+
+    /* Ajustes na Seção About*/
+
+    .about-container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        margin-top: 3rem;
+    }
+
+    .about-container img {
+        width: 70%;
+    }
+
+    .about-container h1 {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    .about-github {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .about-github p {
+        display: none;
+    }
+
+    .about-github .button {
+        width: 80%;
+    }
+
+    /* Ajustes Contato */
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
+
+    .contact-content {
+        width: 100%
+    }
+
+
+    .contact-content h4 {
+        font-size: 1.75rem;
+        line-height: 2.25rem;
+    }
+
+    .contact-content p {
+        margin: 1rem;
+    }
+
+    /* Ajustes da Seção Redes Sociais */
+
+    .social-container {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .social-icon {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    /* Ajustes da Seção Form */
+
+    form {
+        margin: 1rem 0 0 0;
+        padding: 1rem;
+    }
+
+}
+
+/* Tablet - Para telas até 960px */
+
+@media screen and (max-width: 960px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+
+        /* Altura minima será a altura da tela */
+        min-height: 100vh;
+    }
+
+    main {
+
+        /* A seção ocupará todo o espaço disponível */
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        /* O Footer será "empurrado" para o final da tela */
+        margin-top: auto;
+    }
+
+    /* Ajustes Home */
+
+    .home-container {
+        flex-direction: column-reverse;
+        gap: 0;
+        height: auto;
+        margin-top: 0;
+        padding: 32px 16px;
+    }
+
+    .home-content {
+        width: 100%;
+        margin: 0;
+    }
+
+    #home-text {
+        margin-top: 1rem;
+    }
+
+    #home-image {
+        margin-bottom: 0;
+    }
+
+    .home-content .botao {
+        width: 60%;
+        margin-top: 1.5rem;
+    }
+
+    .home-content img {
+        width: 60%;
+    }
+
+    /* Ajustes Sobre */
+
+    .about-container {
+        flex-direction: column;
+        height: auto;
+        margin: 0 auto;
+        padding: 4rem 1rem;
+    }
+
+    .about-container img {
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+
+    #about-text {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    /* Ajustes Contato */
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin: 1rem auto;
+    }
+
+    .contact-content {
+        margin: 1rem 0 0 0;
+    }
+
+    form {
+        width: 100%;
+        margin: 1rem 0 0 0;
+    }
 }
