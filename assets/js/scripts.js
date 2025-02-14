@@ -16,7 +16,7 @@ async function getApiGithub() {
             Sou formado em Análise e Desenvolvimento de Sistemas pela Unisanta e concluí o Bootcamp da Generation Brasil, onde desenvolvi habilidades em Node.js, NestJS, TypeORM, MySQL e Python. Também fiz um curso de Análise de Dados no Instituto Federal, onde adquiri conhecimento sobre manipulação e análise de dados. Como estagiário na SEDUC, fui responsável pela manutenção de sistemas PHP e também atuei em manutenção de sistemas e suporte técnico. Busco novas oportunidades como desenvolvedor, focado em back-end e soluções tecnológicas.            </p>
 
             <div id="about_github" class="flex about-github">
-            <a href="${perfil.html_url} target="_blank" class="button">
+            <a href="${perfil.html_url}" target="_blank" class="button">
                 Github
             </a>
             <p>${perfil.followers} seguidores</p>
